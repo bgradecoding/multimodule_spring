@@ -23,7 +23,11 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation project(':module-common') //root project -> setting.gradle 선언 값과 동일 해야 함
+    implementation project(':module-common')
+    implementation project(path: ':')
+    implementation project(path: ':')
+    implementation project(path: ':')
+    implementation project(path: ':') //root project -> setting.gradle 선언 값과 동일 해야 함
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -32,3 +36,4 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+tasks.register('prepareKotlinBuildScriptModel'){}

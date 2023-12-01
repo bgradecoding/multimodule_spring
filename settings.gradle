@@ -1,0 +1,4 @@
+rootProject.name = 'kms-mo'
+
+include 'kns-mo'
+include 'module-common'
